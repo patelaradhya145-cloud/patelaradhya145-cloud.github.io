@@ -1,208 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aradhya Patel | Portfolio</title>
-    <meta name="description" content="Aradhya Patel's portfolio - Computer Science student, programmer and aspiring web developer.">
+<title>Aradhya Patel | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0b1020;
+color:#f5f7ff;
+line-height:1.6;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:15px;
+flex-wrap:wrap;
+padding:20px 8%;
+background:#11182b;
+position:sticky;
+top:0;
+z-index:5;
+}
+
+.logo{
+font-size:25px;
+font-weight:bold;
+color:#a5b4fc;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:5px 8px;
+font-size:14px;
+}
+
+nav a:hover,.card a:hover{
+color:#a5b4fc;
+}
+
+section{
+padding:70px 8%;
+scroll-margin-top:70px;
+}
+
+.hero{
+min-height:75vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:flex-start;
+}
+
+.tag{
+color:#a5b4fc;
+letter-spacing:3px;
+font-size:13px;
+}
+
+h1{
+font-size:clamp(38px,6vw,65px);
+line-height:1.2;
+margin:18px 0;
+}
+
+h1 span,h2 span{
+color:#8b9cff;
+}
+
+p{
+color:#c3cce0;
+}
+
+.hero p,.about-text{
+max-width:650px;
+margin-bottom:20px;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+padding:11px 18px;
+border-radius:8px;
+background:#6478f5;
+color:white!important;
+text-decoration:none;
+border:1px solid #6478f5;
+transition:.2s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+background:#4f61d8;
+}
+
+.outline{
+background:transparent;
+}
+
+h2{
+font-size:32px;
+margin-bottom:22px;
+}
+
+.subtitle{
+margin-top:-12px;
+margin-bottom:25px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#141d32;
+border:1px solid #293551;
+padding:24px;
+border-radius:14px;
+transition:.25s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:#8191ff;
+box-shadow:0 10px 25px #0004;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+margin-bottom:17px;
+}
+
+.card a:not(.btn),.contact a{
+color:#a5b4fc;
+text-decoration:none;
+}
+
+.skill{
+display:inline-block;
+background:#202c49;
+color:#e0e5ff;
+padding:9px 16px;
+border-radius:7px;
+margin:5px;
+}
+
+.contact{
+text-align:center;
+background:#11182b;
+}
+
+.contact p{
+margin:12px;
+}
+
+footer{
+text-align:center;
+padding:22px;
+color:#9da8c2;
+font-size:13px;
+}
+
+@media(max-width:600px){
+nav{padding:15px 5%}
+section{padding:50px 6%}
+nav a{margin:5px}
+}
+</style>
 </head>
- <h2>Aradhya Patel</h2>
-        </nav>
-    </header>
 
+<body>
 
-    <!-- Home Section -->
-    <section id="home">
-        <div class="home-content">
+<nav>
+<div class="logo">Aradhya.</div>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#profiles">Profiles</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-            
+<section class="hero" id="home">
 
-        
-                
-                <p class="intro">Hello, I'm</p>
+<div class="tag">CSE STUDENT | ASPIRING SOFTWARE DEVELOPER</div>
 
-            
-                <h1>Aradhya Patel</h1>
+<h1>Hi, I'm <span>Aradhya Patel</span></h1>
 
+<p>
+I am a Computer Science Engineering student passionate about
+programming, problem-solving and web development. I enjoy
+learning new technologies and building useful projects.
+</p>
 
-            <h2>Computer Science Student</h2>
-                <p class="description">
-                    I am a CSE student interested in Web Development,
-                    Python, C++ and Software Development.
-                    I enjoy learning new technologies and building projects.
-                </p>
+<div class="buttons">
+<a class="btn" href="#projects">View Projects ↗</a>
 
-            
-                <div class="home-buttons">
-                    <a href="#contact" class="btn">Contact Me</a>
+<a class="btn outline"
+href="https://github.com/patelaradhya145-cloud"
+target="_blank" rel="noopener noreferrer">GitHub ↗</a>
 
-            <a href="#contact" class="btn">Contact Me</a>
-                    <a href="https://docs.google.com/document/d/19zZqpGhFdci3VTMY_s1az87cZwmoEfR3fOFZAYBu-0o/export?format=pdf"
-                       class="btn btn-outline"
-                         target="_blank"
-                   rel="noopener noreferrer">
-    Download Resume
+<a class="btn outline" href="resume.pdf" download>
+Download Resume ↓
 </a>
-                </div>
+</div>
 
-        </div>
-                <div class="social-links">
-                    <a href="https://github.com/patelaradhya145-cloud"
-                       target="_blank" rel="noopener noreferrer">GitHub</a>
-                    
-                       <a href="https://leetcode.com/u/Aradhyacode25/"
-                       target="_blank" rel="noopener noreferrer">leetCode</a>
-
-      
-                    <a href="https://www.hackerrank.com/profile/patelaradhya145"
-                       target="_blank" rel="noopener noreferrer">HackerRank</a>
-
-
-                    
-
-                    <a href="https://www.linkedin.com/in/aradhya-patel-a061b6330/"
-                       target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    
-
-    <!-- About Section -->
-    <section id="about">
-
-        <h2>About Me</h2>
-
-         
-        <p class="section-description">
-            I am a Computer Science Engineering student passionate about
-            programming, web development and problem-solving. I am learning
-            Python, C++, HTML, CSS, JavaScript and Flask while working on
-            projects that help me improve my technical skills.
-        </p>
-
-    </section>
-    <section id="education">
-    <h2>Education</h2>
-
-    <div class="education-card">
-        <h3>Bachelor of Technology (B.Tech)</h3>
-        <p>Computer Science Engineering</p>
-        <p>Bansal Institute of Science and Technology, Bhopal</p>
-        <p>Currently pursuing</p>
-    </div>
 </section>
-    <!-- Education Section -->
-    
 
-    <!-- Skills Section -->
-    <section id="skills">
+<section id="about">
 
-        <h2>My Skills</h2>
+<h2>About <span>Me</span></h2>
 
-        <div class="skills-list">
+<p class="about-text">
+I am pursuing B.Tech in Computer Science Engineering at
+Bansal Institute of Science and Technology, Bhopal.
+I am interested in software development, problem-solving
+and continuously improving my technical skills.
+</p>
 
-            <div>Python</div>
-            <div>C++</div>
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>JavaScript</div>
-            <div>Flask</div>
+<div class="grid">
 
-        </div>
+<div class="card">
+<h3>Education</h3>
+<p>B.Tech in Computer Science Engineering</p>
+<p>Bansal Institute of Science and Technology, Bhopal</p>
+<p>2024–2028</p>
+</div>
 
-    </section>
+<div class="card">
+<h3>Academic Performance</h3>
+<p>CGPA: 7.95 till 3rd semester</p>
+<p>Class XII: 86.8%</p>
+<p>Class X: 90.2%</p>
+</div>
 
+</div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+<section id="skills">
 
-        <h2>My Projects</h2>
+<h2>My <span>Skills</span></h2>
+<p class="subtitle">Technical and interpersonal skills</p>
 
-        <div class="project-container">
+<span class="skill">C++</span>
+<span class="skill">Python</span>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">DSA</span>
+<span class="skill">OOP</span>
+<span class="skill">Operating Systems</span>
+<span class="skill">GitHub</span>
+<span class="skill">Teamwork</span>
+<span class="skill">Time Management</span>
 
-            <div class="project">
-                <h3>SkillSwap</h3>
+</section>
 
-                <p>
-                    A platform where users can share and learn
-                    different skills from each other.
-                    A platform concept where users can share their skills
-                    and learn from each other.
-                </p>
-                <span class="project-tag">Web Development</span>
-            </div>
+<section id="profiles">
 
+<h2>Coding <span>Profiles</span></h2>
+<p class="subtitle">Explore my coding and professional profiles.</p>
 
-            <div class="project">
-                <h3>MealMind</h3>
+<div class="grid">
 
-                <p>
-                    A food management project designed to help users
-                    manage food and reduce food waste.
-                    A food management project focused on managing food
-                    resources and reducing food waste.
-                </p>
-                <span class="project-tag">Food Management</span>
-            </div>
+<div class="card">
+<h3>LeetCode</h3>
+<p>Practicing data structures, algorithms and coding problems.</p>
+<a class="btn"
+href="https://leetcode.com/u/Aradhyacode25/"
+target="_blank" rel="noopener noreferrer">
+View Profile ↗
+</a>
+</div>
 
+<div class="card">
+<h3>CodeChef</h3>
+<p>Competitive programming and coding practice.</p>
+<a class="btn"
+href="https://www.codechef.com/users/aradhyacode_25"
+target="_blank" rel="noopener noreferrer">
+View Profile ↗
+</a>
+</div>
 
-            <div class="project">
-                <h3>SmartBazar AI</h3>
+<div class="card">
+<h3>GitHub</h3>
+<p>Explore my repositories and coding projects.</p>
+<a class="btn"
+href="https://github.com/patelaradhya145-cloud"
+target="_blank" rel="noopener noreferrer">
+View GitHub ↗
+</a>
+</div>
 
-                <p>
-                    A smart shopping system designed to improve
-                    the online shopping experience.
-                    A smart shopping project designed to improve the
-                    shopping experience.
-                </p>
-                <span class="project-tag">Smart Shopping</span>
-            </div>
+<div class="card">
+<h3>LinkedIn</h3>
+<p>Connect with me professionally.</p>
+<a class="btn"
+href="https://www.linkedin.com/in/aradhya-patel-a061b6330"
+target="_blank" rel="noopener noreferrer">
+View LinkedIn ↗
+</a>
+</div>
 
-        </div>
+</div>
+</section>
 
-    </section>
+<section id="projects">
 
+<h2>My <span>Projects</span></h2>
+<p class="subtitle">Projects and practical learning</p>
 
-    <!-- Contact Section -->
-    <section id="contact">
+<div class="grid">
 
-        <h2>Contact Me</h2>
+<div class="card">
+<h3>Employee Leave Management System</h3>
+<p>
+A web-based system developed using C++, HTML and CSS
+to manage employee leave applications and approvals.
+It includes a leave request workflow and attendance tracking.
+</p>
+<a href="https://github.com/patelaradhya145-cloud"
+target="_blank" rel="noopener noreferrer">
+Explore GitHub ↗
+</a>
+</div>
 
-        <p>Email: your-email@gmail.com</p>
-        <p>Have a project or opportunity to discuss? Feel free to connect.</p>
+<div class="card">
+<h3>AI-Based Smart Food Waste Prediction & Redistribution Platform</h3>
+<p>
+An academic project concept designed to predict food waste
+and support redistribution of surplus food to people in need.
+</p>
+<a href="https://github.com/patelaradhya145-cloud"
+target="_blank" rel="noopener noreferrer">
+Explore GitHub ↗
+</a>
+</div>
 
-        <p>
-            Email:
-            <a href="mailto:patelaradhya145@gmail.com">
-                patelaradhya145@gmail.com
-            </a>
-        </p>
+<div class="card">
+<h3>Personal Portfolio Website</h3>
+<p>
+A responsive website showcasing my skills, education,
+projects, coding profiles and resume.
+</p>
+<a href="https://github.com/patelaradhya145-cloud"
+target="_blank" rel="noopener noreferrer">
+Explore GitHub ↗
+</a>
+</div>
 
-        <p>Location: Bhopal, India</p>
+</div>
+</section>
 
-        <a href="mailto:your-email@gmail.com" class="btn">
-        <a href="mailto:patelaradhya145@gmail.com" class="btn">
-            Send Email
-        </a>
+<section id="certifications">
 
-    </section>
+<h2>My <span>Certifications</span></h2>
 
+<div class="grid">
 
-    <!-- Footer -->
-    <footer>
+<div class="card">
+<h3>JavaScript Essentials 1</h3>
+<p>September 2026</p>
+</div>
 
-        <p>
-            2026 Aradhya Patel. All Rights Reserved.
-        </p>
+<div class="card">
+<h3>AWS Certified Developer – Associate</h3>
+<p>September 2026</p>
+</div>
 
-        
-    </footer>
+<div class="card">
+<h3>C++ Essentials 1</h3>
+<p>November 2025</p>
+</div>
 
-    
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact <span>Me</span></h2>
+
+<p>
+Email:
+<a href="mailto:patelaradhya145@gmail.com">
+patelaradhya145@gmail.com
+</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/aradhya-patel-a061b6330"
+target="_blank" rel="noopener noreferrer">
+View LinkedIn ↗
+</a>
+</p>
+
+<p>
+GitHub:
+<a href="https://github.com/patelaradhya145-cloud"
+target="_blank" rel="noopener noreferrer">
+patelaradhya145-cloud ↗
+</a>
+</p>
+
+<p>
+<a class="btn" href="resume.pdf" download>
+Download My Resume ↓
+</a>
+</p>
+
+</section>
+
+<footer>
+© 2026 Aradhya Patel | Personal Portfolio
+</footer>
+
 </body>
-
 </html>
+    
